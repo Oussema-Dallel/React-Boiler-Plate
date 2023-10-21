@@ -1,7 +1,46 @@
-# React Application Boilerplate with linting support
+# Simple Time Tracking Application
 
-This template provides a minimal setup to get React working in Vite with HMR, an extensive list of ESLint rules and testing with `vitest`. The template is css agnostic, so feel free to choose whatever suits you best(keep in mind the related configuration changes and/or addtions).
+A simple Time Tracking Application built with React, Redux and Material UI.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-The Eslint configuration presented here is just a matter of personal preference. It could be too strict sometimes(which I believe is always good in the long run). You could easily fine tune it in the `rules` section if the `.eslintre.cjs` file.
+In root directory, run:
+
+```npm install```
+
+```npm run dev```
+
+## Linting
+
+For best compatibility with vscode and eslint, install the following extension:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+then add the following to your vscode settings.json:
+
+```json
+{
+    "eslint.enable": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.options": {
+        "extensions": [ ".ts", ".tsx"]
+    },
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.workingDirectories": [
+        "./src"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
+```
+
+## Testing
+
+To run tests, run:
+
+```npm run test```
